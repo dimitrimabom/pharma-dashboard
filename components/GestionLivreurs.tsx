@@ -13,12 +13,14 @@ export default function GestionLivreurs() {
   const [livreurs, setLivreurs] = useState<Livreur[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchLivreurs = async () => {
+  const fetchLivreurs = async (active?: { current: boolean }) => {
     // Récupérer les profils qui ont le rôle LIVREUR
     const { data, error } = await supabase
       .from('profils')
       .select('*')
       .eq('role', 'LIVREUR');
+
+    if (active && !active.current) return;
 
     if (error) console.error(error);
     else setLivreurs(data || []);
@@ -26,7 +28,15 @@ export default function GestionLivreurs() {
   };
 
   useEffect(() => {
-    fetchLivreurs();
+    const active = { current: true };
+    setTimeout(() => {
+      if (active.current) {
+        fetchLivreurs(active);
+      }
+    }, 0);
+    return () => {
+      active.current = false;
+    };
   }, []);
 
   if (loading) return <p className="text-gray-500">Chargement des livreurs...</p>;
@@ -35,7 +45,7 @@ export default function GestionLivreurs() {
     <div className="bg-white p-6 rounded-xl border shadow-sm text-gray-800">
       <div className="mb-4">
         <h3 className="text-lg font-bold text-gray-900">Gestion de la Flotte de Livreurs</h3>
-        <p className="text-sm text-gray-500">Liste des agents de livraison enregistrés sur l'application mobile.</p>
+        <p className="text-sm text-gray-500">Liste des agents de livraison enregistrés sur l&apos;application mobile.</p>
       </div>
 
       <div className="overflow-x-auto">

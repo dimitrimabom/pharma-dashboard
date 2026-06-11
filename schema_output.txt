@@ -1,0 +1,28 @@
+Table 'profils' -> EXISTS. Row count: 1
+  Columns: id, nom, telephone, role, cree_le
+  Sample: {"id":"185fd100-07bd-48f4-903f-ae3302ae07a5","nom":"Dimitri Mabom","telephone":"653450971","role":"ADMIN","cree_le":"2026-06-10T01:39:48.308554+00:00"}
+Table 'pharmacies' -> EXISTS. Row count: 1
+  Columns: id, nom, adresse, telephone, position
+  Sample: {"id":2,"nom":"Dimitri Mabom","adresse":"Ange Raphaël","telephone":"653450971","position":{"type":"Point","crs":{"type":"name","properties":{"name":"EPSG:4326"}},"coordinates":[9.79,4.005]}}
+Table 'medicaments' -> EXISTS. Row count: 1
+  Columns: id, nom, description, prix_indicatif
+  Sample: {"id":4,"nom":"fgfgfg","description":null,"prix_indicatif":441}
+Table 'stocks' -> EXISTS. Row count: 1
+  Columns: id, pharmacie_id, medicament_id, quantite
+  Sample: {"id":1,"pharmacie_id":2,"medicament_id":2,"quantite":10}
+Table 'livraisons' -> EXISTS. Row count: 0
+Table 'pharmacie_personnel' -> EXISTS. Row count: 1
+  Columns: id, pharmacie_id, pharmacien_id, cree_le
+  Sample: {"id":3,"pharmacie_id":2,"pharmacien_id":"53bd316b-caa3-486c-a88f-6cd91133cb5f","cree_le":"2026-06-10T02:19:58.946695+00:00"}
+Table 'livraison_details' -> Error: Could not find the table 'public.livraison_details' in the schema cache
+Table 'livraison_elements' -> Error: Could not find the table 'public.livraison_elements' in the schema cache
+Table 'livraison_medicaments' -> Error: Could not find the table 'public.livraison_medicaments' in the schema cache
+Table 'commande_elements' -> Error: Could not find the table 'public.commande_elements' in the schema cache
+Table 'commande_medicaments' -> Error: Could not find the table 'public.commande_medicaments' in the schema cache
+Table 'commandes' -> Error: Could not find the table 'public.commandes' in the schema cache
+Table 'details_livraison' -> Error: Could not find the table 'public.details_livraison' in the schema cache
+Table 'elements_livraison' -> Error: Could not find the table 'public.elements_livraison' in the schema cache
+Table 'panier' -> Error: Could not find the table 'public.panier' in the schema cache
+Table 'panier_elements' -> Error: Could not find the table 'public.panier_elements' in the schema cache
+Table 'items_livraison' -> Error: Could not find the table 'public.items_livraison' in the schema cache
+Table 'articles_livraison' -> Error: Could not find the table 'public.articles_livraison' in the schema cache

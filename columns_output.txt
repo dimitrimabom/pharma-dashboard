@@ -1,0 +1,18 @@
+Column 'id': EXISTS
+Column 'statut': EXISTS
+Column 'cree_le': EXISTS
+Column 'pharmacie_id': EXISTS
+Column 'patient_id': EXISTS
+Column 'livreur_id': EXISTS
+Column 'code_securite': NOT FOUND or ERROR: column livraisons.code_securite does not exist (42703)
+Column 'code': NOT FOUND or ERROR: column livraisons.code does not exist (42703)
+Column 'securite': NOT FOUND or ERROR: column livraisons.securite does not exist (42703)
+Column 'destination': NOT FOUND or ERROR: column livraisons.destination does not exist (42703)
+Column 'adresse': NOT FOUND or ERROR: column livraisons.adresse does not exist (42703)
+Column 'adresse_livraison': NOT FOUND or ERROR: column livraisons.adresse_livraison does not exist (42703)
+Column 'total': NOT FOUND or ERROR: column livraisons.total does not exist (42703)
+Column 'prix': NOT FOUND or ERROR: column livraisons.prix does not exist (42703)
+Column 'distance': NOT FOUND or ERROR: column livraisons.distance does not exist (42703)
+Column 'elements': NOT FOUND or ERROR: column livraisons.elements does not exist (42703)
+Column 'medicaments': NOT FOUND or ERROR: column livraisons.medicaments does not exist (42703)
+Column 'created_at': NOT FOUND or ERROR: column livraisons.created_at does not exist (42703)
